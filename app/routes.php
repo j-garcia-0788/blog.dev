@@ -39,3 +39,13 @@ Route::get('portfolio', function()
 {
 	return 'This is my portfolio.';
 });
+
+Route::get('roll-dice/{guess}', function($guess)
+{
+	$roll = mt_rand(1, 6); 
+	$data = [
+		'roll' => $roll,
+		'guess' => $guess
+	];
+    return View::make('roll-dice', $data);
+});
