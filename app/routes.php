@@ -11,6 +11,18 @@
 |
 */
 
+Route::get('/', 'HomeController@showelcome');
+
+Route::get('say-hello{name}', 'HomeController@sayHello');
+
+Route::get('roll-dice/{guess}', 'HomeController@rollDice');
+
+Route::get('resume', 'HomeController@showResume');
+
+Route::get('portfolio', 'HomeController@showPortfolio');
+
+Route::resource('posts', 'PostsController');
+
 Route::get('/', function()
 {
 	return View::make('hello');
@@ -28,24 +40,4 @@ Route::get('say-hello/{name}', function($name)
 	} else {
 		return "Hello, $name!";
 	}
-});
-
-Route::get('resume', function()
-{
-	return 'This is my resume.';
-});
-
-Route::get('portfolio', function()
-{
-	return 'This is my portfolio.';
-});
-
-Route::get('roll-dice/{guess}', function($guess)
-{
-	$roll = mt_rand(1, 6); 
-	$data = [
-		'roll' => $roll,
-		'guess' => $guess
-	];
-    return View::make('roll-dice', $data);
 });
