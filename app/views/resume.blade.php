@@ -2,8 +2,6 @@
 
 @section ('content')
 
-@include ('partials.navbar')
-
 	<h1>James's Resumé</h1>
 <br>Aug-07 - Present: Chester’s Hamburger Company - Veteran Cashier/Server</br> 
 	<br>•	working in a team environment towards ensuring customer satisfaction together</br> 

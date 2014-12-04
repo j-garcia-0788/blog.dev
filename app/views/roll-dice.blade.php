@@ -18,6 +18,6 @@
 		<!-- <a href ="{{{ action('HomeController@rollDice', $i) }}}">Guess {{{ $i }}}</a> -->
 		{{ link_to_action('HomeController@rollDice', "Guess $i", [$i], ['class'=>'btn btn-info btn-xs']) }}
 	@endfor
-
+null
 
 @stop

@@ -9,7 +9,11 @@ class PostsController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$posts = Post::paginate(2);
+		// $data = [
+		// 	'posts' => $post
+		// ];
+		return View::make('posts.index')->with('posts', $posts);
 	}
 
 
@@ -20,7 +24,7 @@ class PostsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('posts.create');
 	}
 
 
@@ -31,8 +35,26 @@ class PostsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		// create the validator
+   		$validator = Validator::make(Input::all(), Post::$rules);
+		
+			// attempt validation
+	    if ($validator->fails()) {
+	        
+	        return Redirect::back()->withInput()->withErrors($validator);
+
+	    } else {	
+				$posts = new Post();
+				
+				$posts->title = Input::get('title');
+				$posts->body = Input::get('body');
+				
+				$posts->save();
+				
+				return Redirect::action('PostsController@index', $posts->id);
+			}
 	}
+
 
 
 	/**
@@ -43,7 +65,8 @@ class PostsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+		$post = Post::find($id);
+		return View::make('posts.show')->with('post', $post);
 	}
 
 
@@ -55,7 +78,9 @@ class PostsController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		$post = Post::find($id);
+
+		return View::make('posts.edit')->with('post', $post);
 	}
 
 
@@ -67,7 +92,22 @@ class PostsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+		// create the validator
+   		$validator = Validator::make(Input::all(), Post::$rules);
+		
+			// attempt validation
+	    if ($validator->fails()) {
+	        
+	        return Redirect::back()->withInput()->withErrors($validator);
+
+	    } else {	
+		$post = Post::find($id);
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+
+		return Redirect::action('PostsController@show', $post->id);
+	}
 	}
 
 
@@ -79,7 +119,8 @@ class PostsController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$post = Post::find($id);
+		$post->delete();
 	}
 
 

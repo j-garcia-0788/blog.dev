@@ -16,6 +16,7 @@
       <ul class="nav navbar-nav">
         <li class="resume"><a href="">Resumé<span class="sr-only">(current)</span></a></li>
         <li><a href="portfolio">Portfolio</a></li>
+        <li><a href="{{ action('PostsController@index') }}">Posts</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
