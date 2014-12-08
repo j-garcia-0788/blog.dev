@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,21 +14,23 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="resume"><a href="http://blog.dev/resume">Resumé</a></li>
-        <li><a href="http://blog.dev/portfolio">Portfolio</a></li>
-        <li><a href="{{ action('PostsController@index') }}">Blog</a></li>
-        @if (Auth::check())
-        <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
-        @endif
+        <li class="resume"><a href="">Resumé<span class="sr-only">(current)</span></a></li>
+        <li><a href="portfolio">Portfolio</a></li>
+        <li><a href="posts">Posts</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Email</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        @if (Auth::guest())
-          <li><a href="{{{action('HomeController@showlogin') }}}">Login</a></li>
-        @else
-          <li>Welcome {{{Auth::user()->email}}}</li>
-        @endif
-        @if (Auth::check())
-        @endif
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
