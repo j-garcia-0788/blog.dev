@@ -7,5 +7,5 @@ return array(
 	'DB_USER' => '',
 	'DB_PASS' => '',
 	'DEFAULT_USER'=>'',
-	'DEAFAULT_PASS'=>''
+	'DEFAULT_PASS'=>''
 );
