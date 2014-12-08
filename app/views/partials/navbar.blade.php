@@ -23,7 +23,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         @if (Auth::guest())
-          <li><a href="{{{action('HomeController@showlogin') }}}">Login</a></li>
+          <li><a href="{{{action('HomeController@showLogin') }}}">Login</a></li>
         @else
           <li>Welcome {{{Auth::user()->email}}}</li>
         @endif
