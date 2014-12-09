@@ -14,8 +14,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="resume"><a href="http://blog.dev/resume">Resumé</a></li>
-        <li><a href="http://blog.dev/portfolio">Portfolio</a></li>
+        <li class="resume"><a href="{{ action('HomeController@showResume') }}">Resumé</a></li>
+        <li><a href="{{ action('HomeController@showPortfolio') }}">Portfolio</a></li>
         <li><a href="{{ action('PostsController@index') }}">Blog</a></li>
         @if (Auth::check())
           <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
