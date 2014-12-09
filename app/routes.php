@@ -25,23 +25,37 @@ Route::get('login', 'HomeController@showLogin');
 Route::post('login', 'HomeController@doLogin');
 Route::get('logout', 'HomeController@doLogout');
 
+
+
 Route::get('/', function()
 {
     return View::make('hello');
 })->before('auth.basic');
 
-Route::get('orm-test', function ()
-{
-    $post1 = new Post();
-	$post1->title = 'Eloquent is awesome!';
-	$post1->body  = 'It is super fun to create a new post.';
-	$post1->save();
+// Route::get('orm-test', function ()
+// {
+//     //find all posts
+//     	$posts = Post::all();
 
-	$post2 = new Post();
-	$post2->title = 'Post number two';
-	$post2->body  = 'The body for post number two.';
-	$post2->save();
-});
+//     	$posts = Post::find(1);
+//     	$posts = Post::findOrFail(1);
+
+//     	$posts = Post::with('user')->paginate(2);
+//     	$posts = Post::with('user')->get();
+
+//		$posts = Post::with('user')->where('title', '=', '..')->get();
+
+//	   	$query = Post::with('user');
+//		$query->where('title', 'like', '%persistent%');
+//		$query->orWhere('body', 'like', '%othervalues%');
+//		$query->whereHas('user', function($q)
+		// {
+		// 	$q->where('email', 'like', '%ben%');
+		// }		
+
+//		$posts = $query->get();
+// 		$posts = $query->paginate(5);
+//});
 
 Route::get('/', function()
 {

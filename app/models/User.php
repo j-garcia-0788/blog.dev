@@ -26,8 +26,8 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	public function posts()
 	{
-    	return $this->hasMany('Post');
-	}
+    return $this->hasMany('Post');
+}
 
 	public function setPasswordAttribute($value)
 	{
@@ -36,6 +36,6 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 
 	public function setUsernameAttribute($value)
 	{
-    	$this->attributes['username'] = strtolower($value);
+    $this->attributes['username'] = strtolower($value);
 	}
 }

@@ -8,7 +8,6 @@ class PostsController extends \BaseController
 
 		$this->beforeFilter('auth', array('except' => array('index', 'show')));
 	}
-
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -16,7 +15,7 @@ class PostsController extends \BaseController
 	 */
 	public function index()
 	{
-		$posts = Post::with('user')->paginate(2);
+		$posts = Post::with('user')->paginate(3);
 
 		return View::make('posts.index')->with('posts', $posts);
 	}
@@ -39,7 +38,6 @@ class PostsController extends \BaseController
 		$post = new Post();
 
 		return $this->savePost($post);
-
 	}
 	/**
 	 * Display the specified resource.
@@ -70,7 +68,6 @@ class PostsController extends \BaseController
 
 		return View::make('posts.edit')->with('post', $post);
 	}
-
 	/**
 	 * Update the specified resource in storage.
 	 *
@@ -103,12 +100,11 @@ class PostsController extends \BaseController
    		$validator = Validator::make(Input::all(), Post::$rules);
 		
 			// attempt validation
-	    if ($validator->fails()) {
-		
+	    if ($validator->fails())
+	    {
 			Session::flash('errorMessage', "Post not saved, try again!");
 	        
 	        return Redirect::back()->withInput()->withErrors($validator);
-
 	    }
 		$posts = new Post();
 		
