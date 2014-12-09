@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">James!</a>
+      <a class="navbar-brand" href="">James!</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -18,7 +18,7 @@
         <li><a href="http://blog.dev/portfolio">Portfolio</a></li>
         <li><a href="{{ action('PostsController@index') }}">Blog</a></li>
         @if (Auth::check())
-        <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
+          <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
         @endif
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -26,8 +26,7 @@
           <li><a href="{{{action('HomeController@showLogin') }}}">Login</a></li>
         @else
           <li>Welcome {{{Auth::user()->email}}}</li>
-        @endif
-        @if (Auth::check())
+          <li><a href="{{ action('HomeController@doLogout') }}">Logout</a></li>
         @endif
       </ul>
     </div><!-- /.navbar-collapse -->
