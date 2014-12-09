@@ -16,10 +16,8 @@ class PostsController extends \BaseController
 	 */
 	public function index()
 	{
-		$posts = Post::paginate(2);
-		// $data = [
-		// 	'posts' => $post
-		// ];
+		$posts = Post::with('user')->paginate(2);
+
 		return View::make('posts.index')->with('posts', $posts);
 	}
 	/**
@@ -83,7 +81,7 @@ class PostsController extends \BaseController
 	{
 		$post = Post::find($id);
 
-		return $this-savePost($post);
+		return $this->savePost($post);
 	}
 	/**
 	 * Remove the specified resource from storage.
@@ -116,11 +114,12 @@ class PostsController extends \BaseController
 		
 		$posts->title = Input::get('title');
 		$posts->body = Input::get('body');
-		
+		$posts->user_id = Auth::id();
+
 		$posts->save();
 		
 		Session::flash('successMessage', "Post saved. Sweet Peas!");
-		
+
 		return Redirect::action('PostsController@index', $posts->id);
 	}
 }

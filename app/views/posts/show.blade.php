@@ -2,8 +2,6 @@
 
 @section ('content')
 
-<link rel="stylesheet" href="css/style.css">
-
 <div id="background" class="container">
 	<h2 align="center">Edit blog Posts</h2>
 		<div class="col-md-6">
