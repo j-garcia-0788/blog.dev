@@ -1,0 +1,153 @@
+<html>
+<head>
+	<title>Whack a Logosaur!</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+	<style>
+		
+		body { 
+			background-image: url(trexjeep.png);
+			background-color: black;
+			background-size: cover;
+		}
+		.win {
+			color: yellow;
+			font-family: 'Shadows Into Light', cursive;
+			font-size: 30;
+			font-style: underline;
+		}
+	    .grid {
+	    	margin: auto;
+		    width: 700px;
+		    height: 700px;
+		}
+		.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9  {
+		    width: 210px;
+		    height: 160px;
+		    float: left;
+		    position: center;
+		    overflow: hidden;
+		}
+		.logo{
+			display: none;
+			overflow: hidden;
+		}
+
+		.timer, .score {
+	 		font-size: 30px;
+	        color: white;
+	        position: fixed;
+	        right: 10px;
+	    }
+
+	</style>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+<div id="timer" class="timer"></div><br><br>
+<div id="score" class="score"></div>
+<div align="center">
+	<img src="title.png">
+	<p class="win">Must get 16pts to win!</p>
+	<button id="start" class="btn btn-md btn-danger">Begin!</button><br>
+	<div class="grid">	
+		<div class="box1"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box2"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box3"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box4"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box5"><img class="logo" src="official-logo.jpg"></div>
+		<div class="box6"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box7"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box8"><img class="logo" src="jurassiclogo.jpg"></div>
+		<div class="box9"><img class="logo" src="jurassiclogo.jpg"></div>
+	</div>
+
+	<div class="modal fade" id="modalWin" tabindex="-1" role="dialog" aria-hidden="true">
+    	<div class="modal-dialog">
+     		<div class="modal-content">
+      			<div class="modal-body">
+      				<h4 class="win"><strong>You Win!</strong></h4>
+		  			<img class="end" src="trexroars.gif">
+		  		</div>
+		  		<div class="modal-footer">
+		        	<a href="/whackamole/whack.html" class="btn btn-danger btn-sm">Play Again!</a>
+		        	<a href="/portfolio" class="btn btn-danger btn-sm">Portfolio</a>
+		      	</div>
+		    </div>
+		</div>
+    </div>
+    <div class="modal fade" id="modalLose" tabindex="-1" role="dialog" aria-hidden="true">
+    	<div class="modal-dialog">
+     		<div class="modal-content">
+      			<div class="modal-body">
+      				<h4 class="win"><strong>You Lose!</strong></h4>
+		  			<img class="end" src="28ulcwm.gif">
+		  		</div>
+		  		<div class="modal-footer">
+		        	<a href="/whackamole/whack.html" class="btn btn-danger btn-sm">Play Again!</a>
+		        	<a href="/portfolio" class="btn btn-danger btn-sm">Portfolio</a>
+		      	</div>
+		    </div>
+		</div>
+    </div>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<script>
+	$('document').ready(function() {
+		var audio = new Audio('roar.mp3');
+		var audio2 = new Audio('trexlawyer3.mp3');
+		var score = 0;
+		var count = 16;
+		var max = 0;
+		var interval = 800; // interval time in milliseconds
+		var logo = $('.logo');
+
+	
+	function outcome() {
+		if(score >= 16){
+			$('#modalWin').modal('show');
+			audio.play();
+
+		} else {
+		    $('#modalLose').modal('show');
+		    audio2.play();
+		}
+	}
+
+		$("#start").click(function() {
+			
+			$(".logo").click(function(click) {
+			     $(this).children().fadeToggle();
+			         score++
+			         $('#score').html(score);
+			});
+
+			var initiate = setInterval(function() {
+			    $('.logo').fadeOut(500);
+
+			    if (count == max) {
+			        clearInterval(initiate);
+			        outcome();
+
+			        
+			    } else {
+			        var random = Math.floor((Math.random() * logo.length));
+			        //console.log(random)
+			        $(logo[random]).fadeIn(500);
+			        count--; 
+			        $('#timer').html(count);
+			        
+			    	}
+			}, interval);
+			
+
+		});
+    });
+	
+</script>
+</body>
+</html>
