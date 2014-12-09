@@ -17,7 +17,18 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('resume');
+		return View::make('hello');
+	}
+
+	public function sayHello($name)
+	{
+		$age = 28;
+		$data = [
+			'name' => $name,
+			'age' => $date
+		];
+
+		return View::make('say-hello', $data);
 	}
 
 	public function rollDice($guess)
@@ -29,7 +40,6 @@ class HomeController extends BaseController {
 		];
 	    return View::make('roll-dice', $guess);
 	}
-	
 	public function showResume()
 	{
 		return View::make('resume');

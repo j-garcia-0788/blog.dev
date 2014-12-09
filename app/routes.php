@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showPortfolio');
+Route::get('/', 'HomeController@showelcome');
 
 Route::get('say-hello{name}', 'HomeController@sayHello');
 Route::get('roll-dice/{guess}', 'HomeController@rollDice');
