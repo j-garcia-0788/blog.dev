@@ -15,7 +15,7 @@
 			    {{ $errors->first('body', '<span class="help-block"><div class="alert alert-danger" role="alert">Must have a title.</div></span>') }}
 			    	<textarea name="body" class="form-control" rows="3" value="{{{ $post->body }}}" placeholder="Body"></textarea>
 			    <div>
-			    <input type="submit" class="btb btn-info btn-sm" name="button">
+			    <input type="submit" class="btn btn-info btn-sm" name="button">
 
 			    {{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'class' => 'form-horizontal', 'id' => 'delete-form')) }}
 			    {{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-sm')))}}
