@@ -5,22 +5,24 @@
 <div id="background" class="container">
 	<h2 align="center">Edit blog Posts</h2>
 		<div class="col-md-6">
-			{{ Form::model($post, (array('action' => ['PostsController@update', $post->id], 'method'=> 'PUT')))}}
-			    <div class="form-group">
-			    {{ $errors->first('title', '<span class="help-block"><div class="alert alert-danger" role="alert">Must have a title.</div></span>') }}
-			    	<input type="text" name="title" value="{{{ $post->title }}}" placeholder="Title">
-			    
-			    </div>
-			    <div class="form-group">
-			    {{ $errors->first('body', '<span class="help-block"><div class="alert alert-danger" role="alert">Must have a title.</div></span>') }}
-			    	<textarea name="body" class="form-control" rows="3" value="{{{ $post->body }}}" placeholder="Body"></textarea>
-			    <div>
-			    <input type="submit" class="btn btn-info btn-sm" name="button">
+       	{{ Form::model($post, (array('action' => ['PostsController@update', $post->id], 'method' => 'PUT'))) }}
+			<div class="form-group">
+				<label for="title" class="edit-title">Title</label>
+			    <input type="text" class="form-control" name="title" value="{{{ $post->title }}}" id="blogTitle" placeholder="Title">
+			</div>
+			<div class="form-group">
+			    <label for="body" class="edit-body">Body</label>
+			    <textarea name="body" rows="4" class="form-control">{{{ $post->body }}}</textarea>
+			</div>
+			<button type="submit" class="btn btn-info btn-sm">Edit</button>
+		{{ Form::close() }}	
+        
+        {{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'class' => 'form-horizontal', 'id' => 'delete-form')) }}
+                
+            {{ Form::submit('Delete!', (array('class' => 'btn btn-danger btn-sm')))}}
+        
+        {{ Form::close() }}
 
-			    {{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'class' => 'form-horizontal', 'id' => 'delete-form')) }}
-			    {{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-sm')))}}
-			    {{ Form::close() }}
-			{{ Form::close() }}
 		</div>
 </div>
 

@@ -3,20 +3,18 @@
 @section ('content')
 
 <div id="background" class="container">
-	<h2 align="center">Edit blog Posts</h2>
-		<div class="col-md-6">
-			{{ Form::model($post, (array('action' => ['PostsController@update', $post->id], 'method'=> 'PUT')))}}
-			   
-				@include('posts.form')
-
-			    <div>
-			    <input type="submit" class="btb btn-info" name="button">
-			    </div>
-
-			{{ Form::close() }}
-			{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'class' => 'form-horizontal', 'id' => 'delete-form')) }}
-			 	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs')))}}
-			{{ Form::close() }}
+	<h2 align="center">{{ $post->title }}</h2>
+		<div class="col-md-12">	
+			<div class="row"> 
+				<div class="col-lg-12 text center">
+					<p>{{ $post->body }}</p>
+				</div>
+			</div>
+			<br>
+			<div class="col-lg-12 text center">
+				<a class='btn btn-success btn-sm' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
+				<a class='btn btn-info btn-sm' href="{{ action('PostsController@index') }}">Show Blog</a>
+			</div>
 		</div>
 </div>
 

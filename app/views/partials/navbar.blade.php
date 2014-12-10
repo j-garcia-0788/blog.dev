@@ -31,7 +31,7 @@
         @if (Auth::guest())
           <li><a href="{{{ action('HomeController@showLogin') }}}">Login </a></li>
         @else
-          <li><p class="navbar-text navbar-right">Welcome {{{ Auth::user()->email }}} </p></li>
+          <li><p class="navbar-text navbar-right">Welcome {{{ Auth::user()->email }}} &nbsp;</p></li>
           <li><a href="{{{ action('HomeController@doLogout') }}}"> Logout</a></li>
         @endif
       </ul>

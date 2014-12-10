@@ -28,7 +28,7 @@
     @yield('content')
 	
 	
-    <div class="container text-center" id="footer">
+    <div class="text-center" id="footer">
 	    <p>Made by James Garcia</p>
 	</div>
 

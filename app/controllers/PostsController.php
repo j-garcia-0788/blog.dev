@@ -118,18 +118,11 @@ class PostsController extends \BaseController
 			$posts->title = Input::get('title');
 			$posts->body = Input::get('body');
 			$posts->user_id = Auth::id();
-			if(Input::hasFile('image')) {
-					$file = Input::file('image');
-					$destinationPath = 'uploaded_images/';
-					$filename = $file->getClientOriginalName();
-					$file = $file->move($destinationPath, $filename);
-					$posts->image = $destinationPath . $filename;
-			}
 		}
 		$posts->save();
 		
 		Session::flash('successMessage', "Post is saved!");
 
-		return Redirect::action('PostsController@index', $posts->id);
+		return Redirect::action('PostsController@show', $posts->id);
 	}
 }

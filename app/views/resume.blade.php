@@ -2,7 +2,6 @@
 
 @section ('content')
 
-
 <div id="background" class="container" align="center">
 	<h1>James' Resumé</h1>
 		<div class="row">
