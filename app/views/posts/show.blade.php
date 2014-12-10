@@ -16,7 +16,7 @@
 			{{ Form::close() }}
 			{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'class' => 'form-horizontal', 'id' => 'delete-form')) }}
 			 	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs')))}}
-			 {{ Form::close() }}
+			{{ Form::close() }}
 		</div>
 </div>
 

@@ -2,7 +2,6 @@
 
 @section ('content')
 
-<!-- Latest compiled and minified CSS -->
 
 <div id="background" class="container" align="center">
 	<h1>James' Resumé</h1>

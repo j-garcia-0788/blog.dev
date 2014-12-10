@@ -11,14 +11,12 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 	
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="/css/style.css">
 
 </head>
 <body>
 
 	@include ('partials.navbar')
-
-    @yield('content')
 	
 	@if (Session::has('successMessage'))
 	    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
@@ -26,6 +24,10 @@
 	@if (Session::has('errorMessage'))
 	    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
 	@endif
+
+    @yield('content')
+	
+	
     <div class="container text-center" id="footer">
 	    <p>Made by James Garcia</p>
 	</div>
