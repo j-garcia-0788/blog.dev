@@ -21,12 +21,18 @@
           <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
         @endif
       </ul>
+      {{ Form::open(array('action'=> array('PostsController@index'), 'class'=>'nav navbar-form navbar-right', 'method'=> 'GET')) }}
+      {{ Form::text('search', null, array('placeholder'=> 'Search Blog Posts', 'class'=>'form-control')) }}
+
+      {{ Form::submit('Search', array('class'=>'btn btn-default')) }}
+
+      {{ Form::close() }}
       <ul class="nav navbar-nav navbar-right">
         @if (Auth::guest())
-          <li><a href="{{{action('HomeController@showLogin') }}}">Login</a></li>
+          <li><a href="{{{ action('HomeController@showLogin') }}}">Login </a></li>
         @else
-          <li>Welcome {{{Auth::user()->email}}}</li>
-          <li><a href="{{ action('HomeController@doLogout') }}">Logout</a></li>
+          <li><p class="navbar-text navbar-right">Welcome {{{ Auth::user()->email }}} </p></li>
+          <li><a href="{{{ action('HomeController@doLogout') }}}"> Logout</a></li>
         @endif
       </ul>
     </div><!-- /.navbar-collapse -->

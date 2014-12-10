@@ -13,23 +13,22 @@
 	
 	<link rel="stylesheet" href="../css/style.css">
 
-	<script src="jquery.tagsinput.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="jquery.tagsinput.css" />
-
 </head>
 <body>
 
 	@include ('partials.navbar')
 
-	    @if (Session::has('successMessage'))
-		    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-		@endif
-		@if (Session::has('errorMessage'))
-		    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-		@endif
-
-	    @yield('content')
+    @yield('content')
+	
+	@if (Session::has('successMessage'))
+	    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+	@endif
+	@if (Session::has('errorMessage'))
+	    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+	@endif
+    <div class="container text-center" id="footer">
+	    <p>Made by James Garcia</p>
+	</div>
 
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 

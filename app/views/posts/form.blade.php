@@ -11,3 +11,7 @@
     <p>Body:</p>
     {{Form::textarea('body', Input::old('body'), ['class' => 'form-control', 'rows' => 4]) }}
 </div>
+<div class="form-group">
+	<label for="image">Image Upload - optional</label>
+	<input type="file" class="form-control" name="image" placeholder="Upload an Image">
+</div>
