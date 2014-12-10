@@ -13,6 +13,10 @@
 	
 	<link rel="stylesheet" href="../css/style.css">
 
+	<script src="jquery.tagsinput.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="jquery.tagsinput.css" />
+
 </head>
 <body>
 
