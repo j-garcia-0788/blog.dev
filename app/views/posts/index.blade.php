@@ -2,12 +2,6 @@
 
 @section ('content')
 
-<style>
-	#pagination {
-		
-	}
-</style>
-
 <div id="background" class="container" align="center">
 	<h2 align="center">Blog Posts</h2>
 		<br>
@@ -19,13 +13,13 @@
 					<p class='created_on'>Created on: {{$post->created_at}} </p>
 					<p> by {{{ $post->user->email }}} </p>
 
-					@if (Auth::check())
 					<div class="row">
+					@if (Auth::check())
 						{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
 							<a class='btn btn-info btn-xs' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
 					    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
 					    {{ Form::close() }}
-						@endif
+					@endif
 					</div>
 				</div>
 			@endforeach

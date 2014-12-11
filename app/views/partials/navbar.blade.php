@@ -1,3 +1,32 @@
+<style>
+  @media (max-width: 950px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+</style>
+
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -29,10 +58,10 @@
       {{ Form::close() }}
       <ul class="nav navbar-nav navbar-right">
         @if (Auth::guest())
-          <li><a href="{{{ action('HomeController@showLogin') }}}">Login </a></li>
+          <li><a href="{{{ action('HomeController@showLogin') }}}">Login</a></li>
         @else
           <li><p class="navbar-text navbar-right">Welcome {{{ Auth::user()->email }}} &nbsp;</p></li>
-          <li><a href="{{{ action('HomeController@doLogout') }}}"> Logout</a></li>
+          <li><a href="{{{ action('HomeController@doLogout') }}}">Logout</a></li>
         @endif
       </ul>
     </div><!-- /.navbar-collapse -->
