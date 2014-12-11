@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<div id="background" class="container" align="center">
+<div align="center">
 	<h2 align="center">Blog Posts</h2>
 		<br>
 		<div class="row">

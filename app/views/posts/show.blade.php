@@ -2,7 +2,6 @@
 
 @section ('content')
 
-<div id="background" class="container">
 	<h2 align="center">{{ $post->title }}</h2>
 		<div class="col-md-12">	
 			<div class="row"> 
@@ -18,14 +17,4 @@
 		</div>
 </div>
 
-@stop
-
-@section('bottomscript')
-	<script type="text/javascript">
-		$('#delete-form').submit(function(e) {
-			if (!confirm('Are you sure you want to delete this post?')){
-				e.preventDefault();
-			}
-		});
-	</script>
 @stop

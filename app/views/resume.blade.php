@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<div id="background" class="container" align="center">
+<div align="center">
 	<h1>James' Resumé</h1>
 		<div class="row">
 			<div class="col-lg-12">

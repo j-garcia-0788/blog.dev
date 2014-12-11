@@ -2,8 +2,6 @@
 
 @section ('content')
 
-<div id="background" class="container">
-
 	<h2 align="center">New Post</h2>
 
 	<div class="col-md-6">
