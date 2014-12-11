@@ -4,7 +4,7 @@
 
 <div id="background" class="container">
 
-	<h2 align="center">Create blog Posts</h2>
+	<h2 align="center">New Post</h2>
 
 	<div class="col-md-6">
 		{{ Form::open(array('action' => 'PostsController@store')) }}
