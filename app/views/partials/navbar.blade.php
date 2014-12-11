@@ -49,6 +49,17 @@
         @if (Auth::check())
           <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
         @endif
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            Contact <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="mailto:james.m.garcia7@gmail.com">Email</a></li>
+            <li><a href="https://github.com/j-garcia-0788">GitHub</a></li>
+            <li><a href="www.linkedin.com/in/jmichaelg88/">LinkedIn</a></li>
+            <li><a href="www.twitter.com/jmichaelgar">Twitter</a></li>
+          </ul>
+        </li>
       </ul>
       {{ Form::open(array('action'=> array('PostsController@index'), 'class'=>'nav navbar-form navbar-right', 'method'=> 'GET')) }}
       {{ Form::text('search', null, array('placeholder'=> 'Search Blog Posts', 'class'=>'form-control')) }}
