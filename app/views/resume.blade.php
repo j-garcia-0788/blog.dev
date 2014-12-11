@@ -6,7 +6,7 @@
 	<h1>James' Resumé</h1>
 		<div class="row">
 			<div class="col-lg-12">
-				<img src="img/me.jpg" class="img-circle">
+				<img src="img/me.jpg" class="img-circle" height="400px">
 			</div>
 		</div>
 		<br>
