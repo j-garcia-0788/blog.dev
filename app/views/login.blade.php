@@ -2,7 +2,6 @@
 
 @section('content')
 
-<div id="background" class="container">
 	<h2 align="center">Login:</h2>
 			<div class="col-md-5" align="center">
 				{{ Form::open(['action' => 'HomeController@doLogin']) }}
