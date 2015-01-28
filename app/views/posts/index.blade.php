@@ -16,7 +16,7 @@
 					<div class="row">
 						@if (Auth::check())
 							{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
-								<a class='btn btn-info btn-xs' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
+								<a class='btn btn-info btn-xs' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
 						    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
 						    {{ Form::close() }}
 						@endif
