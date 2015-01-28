@@ -14,12 +14,12 @@
 					<p> by {{{ $post->user->email }}} </p>
 
 					<div class="row">
-					@if (Auth::check())
-						{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
-							<a class='btn btn-info btn-xs' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
-					    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
-					    {{ Form::close() }}
-					@endif
+						@if (Auth::check())
+							{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
+								<a class='btn btn-info btn-xs' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
+						    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
+						    {{ Form::close() }}
+						@endif
 					</div>
 				</div>
 			@endforeach
@@ -41,7 +41,7 @@
 		$('.delete-btn').click(function() {
 			var postId = $(this).data('post-id');
 
-			$("delete-form").attr('action', '/posts/' + postId);
+			$("#delete-form").attr('action', '/posts/' + postId);
 
 			if (confirm('Are you sure you want to delete this post?')){
 				$("#delete-form").submit();

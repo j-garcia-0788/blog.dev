@@ -7,6 +7,11 @@ class PostsController extends \BaseController
 		parent::__construct();
 
 		$this->beforeFilter('auth', array('except' => array('index', 'show')));
+		// $this->beforeFilter(function(){
+		// 	if(Auth::user()->role_id != 1){
+		// 		return Redirect::to('/');
+		// 		} 
+		// 	}, array('except' => array('index', 'show')));
 	}
 	/**
 	 * Display a listing of the resource.
@@ -23,7 +28,7 @@ class PostsController extends \BaseController
 				  ->orWhere('body', 'LIKE', "%{$search}%");
 		}
 		
-		$posts = $query->orderBy('created_at', 'desc')->paginate(3);
+		$posts = $query->orderBy('created_at', 'desc')->paginate(9);
 
 		return View::make('posts.index')->with('posts', $posts)->with('search', $search);
 	}
@@ -84,9 +89,24 @@ class PostsController extends \BaseController
 	 */
 	public function update($id)
 	{
-		$post = Post::find($id);
+		$post = Post::findOrFail($id);
 
-		return $this->savePost($post);
+		$validator = Validator::make($data = Input::all(), Post::$rules);
+
+		if ($validator->fails())
+		{
+			Session::flash('errorMessage', "Post not saved, try again!");
+			return Redirect::back()->withErrors($validator)->withInput();
+		} else {
+			$post = Post::find($id);
+			$post->title = Input::get('title');
+			$post->body = Input::get('body');
+			$post->save();
+
+			Session::flash('successMessage', "Post is saved!");
+
+		return Redirect::action('PostsController@show', $post->id);
+		}
 	}
 	/**
 	 * Remove the specified resource from storage.
@@ -96,10 +116,9 @@ class PostsController extends \BaseController
 	 */
 	public function destroy($id)
 	{
-		$post = Post::findOrFail($id);
-		$post->delete();
-		
-		return Redirect::action('PostsController@index', $post->id);
+		Post::destroy($id);
+
+		return Redirect::route('posts.index');
 	}
 
 	protected function savePost(Post $post)

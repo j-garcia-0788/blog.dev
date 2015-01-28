@@ -5,7 +5,7 @@
 	<h2 align="center">Edit Post</h2>
 		<div class="col-md-6">
         	<div class="row">
-		       	{{ Form::model($post, (array('action' => ['PostsController@update', $post->id], 'method' => 'PUT'))) }}
+		       	{{ Form::open(array('method' => 'PUT', 'action' => ['PostsController@update', $post->id], 'role' => 'form')) }}
 					<div class="form-group">
 						<label for="title" class="edit-title">Title</label>
 					    <input type="text" class="form-control" name="title" value="{{{ $post->title }}}" id="blogTitle" placeholder="Title">
