@@ -4,7 +4,7 @@
 
 	<h2 class="text-center">Login:</h2>
 		<div class="row text-center">
-			<div class="col-md-5">
+			<div class="col-md-6 col-md-offset-3">
 				{{ Form::open(['action' => 'HomeController@doLogin']) }}
 
 				{{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email', 'autofocus']) }}
