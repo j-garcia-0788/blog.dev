@@ -2,8 +2,9 @@
 
 @section('content')
 
-	<h2 align="center">Login:</h2>
-			<div class="col-md-5" align="center">
+	<h2 class="text-center">Login:</h2>
+		<div class="row text-center">
+			<div class="col-md-5">
 				{{ Form::open(['action' => 'HomeController@doLogin']) }}
 
 				{{ Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'Email', 'autofocus']) }}
@@ -14,6 +15,7 @@
 
 				{{ Form::close() }}
 			</div>
+		</div>
 </div>
 
 @stop
