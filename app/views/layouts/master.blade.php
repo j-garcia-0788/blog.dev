@@ -25,10 +25,13 @@
     	@yield('content')
 	</div>
 	
-    <div class="text-center" id="footer">
-	    <p>Made by James Garcia</p>
-	</div>
-
+	<footer class="footer">
+	    <div class="footer">
+		    <div class="span3">
+	          <h4 class="whitetxt">James Garcia</h4>
+	        </div>
+		</div>
+	</footer>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
