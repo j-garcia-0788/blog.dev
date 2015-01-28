@@ -2,8 +2,13 @@
 
 @section ('content')
 
-<div align="center">
-	<h2 align="center">Blog Posts</h2>
+<div class="text-center">
+	<div class="row">
+		<div class="col-lg-12">
+			<img src="img/me.jpg" class="img-circle" height="350px">
+		</div>
+	</div>
+	<h2 class="text-center">Blog Posts</h2>
 		<br>
 		<div class="row">
 			@foreach ($posts as $post)

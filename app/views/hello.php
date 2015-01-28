@@ -35,7 +35,7 @@
 </head>
 <body>
 	<div class="welcome">
-		<a href="/resume" title="Laravel PHP Framework"><img src="/img/r2.jpg" height="400px" alt="Web is up!"></a>
+		<a href="/posts" title="Laravel PHP Framework"><img src="/img/r2.jpg" height="400px" alt="Web is up!"></a>
 		<h1>My creations.</h1>
 	</div>
 </body>
