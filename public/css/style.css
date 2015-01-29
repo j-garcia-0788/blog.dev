@@ -46,5 +46,5 @@ a:link {
 
 .navbar{
 	margin-bottom: 0px;
-	position: fixed;
+	position: absolute;
 }
