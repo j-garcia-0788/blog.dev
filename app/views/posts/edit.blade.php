@@ -2,8 +2,8 @@
 
 @section ('content')
 
-	<h2 align="center">Edit Post</h2>
-		<div class="col-md-6">
+	<h2 class="text-center">Edit Post</h2>
+		<div class="col-md-6 col-md-offset-3">
         	<div class="row">
 		       	{{ Form::open(array('method' => 'PUT', 'action' => ['PostsController@update', $post->id], 'role' => 'form')) }}
 					<div class="form-group">

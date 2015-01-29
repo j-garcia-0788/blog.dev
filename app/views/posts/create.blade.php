@@ -4,7 +4,7 @@
 
 	<h2 align="center">New Post</h2>
 
-	<div class="col-md-6">
+	<div class="col-md-6 col-md-offset-3 text-center">
 		{{ Form::open(array('action' => 'PostsController@store')) }}
 		    
 		   	@include('posts.form')
