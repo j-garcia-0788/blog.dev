@@ -13,7 +13,7 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="https://docs.google.com/file/d/0B4_3BXvJT0LmSkxWalZ0T0RieHM" target="_blank">Resumé</a></li>
         <li><a href="{{ action('HomeController@showPortfolio') }}">Portfolio</a></li>
