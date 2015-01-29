@@ -14,7 +14,7 @@
 				<div class="col-md-6">
 					<h3> {{$post->title}} </h3>
 					<p class='blog_body'> {{ substr($post->body, 0, 200) }} ...</p>
-					<p class='created_on'>Created on: {{$post->created_at}} </p>
+					<p class='created_on'>Created on: {{ date("d F Y",strtotime($post->created_at)) }} </p>
 					<p> by {{{ $post->user->email }}} </p>
 
 					<div class="row">
