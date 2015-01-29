@@ -12,19 +12,19 @@
 		<br>
 		<div class="row">
 			@foreach ($posts as $post)
-				<div class="col-md-4">
+				<div class="col-md-6">
 					<h3> {{$post->title}} </h3>
 					<p class='blog_body'> {{ substr($post->body, 0, 200) }} ...</p>
 					<p class='created_on'>Created on: {{$post->created_at}} </p>
 					<p> by {{{ $post->user->email }}} </p>
 
 					<div class="row">
-						@if (Auth::check())
-							{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
-								<a class='btn btn-info btn-xs' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-						    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
-						    {{ Form::close() }}
-						@endif
+						{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
+							<a class='btn btn-info btn-xs' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
+							@if (Auth::check())
+					    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
+					    	@endif
+					    {{ Form::close() }}
 					</div>
 				</div>
 			@endforeach

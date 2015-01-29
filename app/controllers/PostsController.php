@@ -28,7 +28,7 @@ class PostsController extends \BaseController
 				  ->orWhere('body', 'LIKE', "%{$search}%");
 		}
 		
-		$posts = $query->orderBy('created_at', 'desc')->paginate(9);
+		$posts = $query->orderBy('created_at', 'desc')->paginate(6);
 
 		return View::make('posts.index')->with('posts', $posts)->with('search', $search);
 	}
