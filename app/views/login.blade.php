@@ -2,7 +2,8 @@
 
 @section('content')
 
-	<h2 class="text-center">Login:</h2>
+	<div class="login">
+		<h2 class="text-center">Login:</h2>
 		<div class="row text-center">
 			<div class="col-md-6 col-md-offset-3">
 				{{ Form::open(['action' => 'HomeController@doLogin']) }}
@@ -16,6 +17,6 @@
 				{{ Form::close() }}
 			</div>
 		</div>
-</div>
+	</div>
 
 @stop

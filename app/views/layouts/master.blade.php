@@ -13,8 +13,7 @@
 <body>
 
 	@include ('partials.navbar')
-	
-	<div id="background" class="container">
+	<div class="container background">
 		@if (Session::has('successMessage'))
 		    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
 		@endif
@@ -26,7 +25,7 @@
 	</div>
 	
 	<footer class="footer">
-	    <div class="footer">
+	    <div class="foot">
 		    <div class="span3">
 	          <h4 class="whitetxt">James Garcia</h4>
 	        </div>
