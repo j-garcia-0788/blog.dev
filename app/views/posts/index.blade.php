@@ -10,7 +10,6 @@
 	</div>
 	<h2 class="text-center">Blog Posts</h2>
 		<br>
-		<div class="row">
 			@foreach ($posts as $post)
 				<div class="col-md-6">
 					<h3> {{$post->title}} </h3>
@@ -28,7 +27,6 @@
 					</div>
 				</div>
 			@endforeach
-		</div>
 	<div class="row">
     	{{ $posts->links() }}
     </div>
