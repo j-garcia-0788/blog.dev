@@ -26,12 +26,10 @@
 	    </div>
 	</div>
 	
-	<footer class="footer">
-	    <div class="foot">
-		    <div class="span3">
-	          <h4 class="whitetxt">James Garcia</h4>
-	        </div>
-		</div>
+	<footer class="footer navbar-inverse">
+	    <div class="span3">
+          <h4 class="whitetxt">James Garcia</h4>
+        </div>
 	</footer>
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
