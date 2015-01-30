@@ -13,8 +13,7 @@
 <body>
 
 	@include ('partials.navbar')
-	<div class="container background">
-		<div class="content text-center">
+		<div class="text-center">
 			@if (Session::has('successMessage'))
 			    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
 			@endif
@@ -24,13 +23,8 @@
 		
 	    	@yield('content')
 	    </div>
-	</div>
-	
-	<footer class="footer navbar-inverse">
-	    <div class="span3">
-          <h4 class="whitetxt">James Garcia</h4>
-        </div>
-	</footer>
+	@include ('partials.footer')
+
 	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>

@@ -1,41 +1,47 @@
 @extends ('layouts.master')
 
 @section ('content')
-
-<div class="text-center">
-	<div class="row">
-		<div class="col-lg-12">
-			<img src="img/me.jpg" class="img-circle" height="350px">
+	
+	<section class="module parallax parallax-1">
+		<div class="container">
+			<h1>James Garcia</h1>
+			<h2>Linux, Apache, MYSQL, PHP, HTML, CSS, Javascript, Laravel, Bootstrap</h2>
 		</div>
-	</div>
-	<h2 class="text-center">Blog Posts</h2>
-		<br>
-			@foreach ($posts as $post)
-				<div class="col-md-6">
-					<h3> {{$post->title}} </h3>
-					<p class='blog_body'> {{ substr($post->body, 0, 200) }} ...</p>
-					<p class='created_on'>Created on: {{ date("d F Y",strtotime($post->created_at)) }} </p>
-					<p> by {{{ $post->user->email }}} </p>
+	</section>
 
-					<div class="row">
-						{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
-							<a class='btn btn-info btn-xs' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-							@if (Auth::check())
-					    	{{ Form::submit('Delete', (array('class' => 'btn btn-danger btn-xs delete-btn')))}}
-					    	@endif
-					    {{ Form::close() }}
+	<section class="module content" id="blog">
+		<div class="container">
+			<div class="title"><strong>Blog Posts</strong></div>
+				
+				@foreach ($posts as $post)
+					<div class="col-md-4">
+						<div class="post">
+							<p><strong> {{$post->title}} </strong></p>
+							<p class='blog_body'> {{ substr($post->body, 0, 200) }} ...</p>
+							<div class="row">
+								{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
+									<a class='btn btn-info btn-xs' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
+							    {{ Form::close() }}
+							</div>
+						</div>
 					</div>
-				</div>
-			@endforeach
-	<div class="row">
-    	{{ $posts->links() }}
-    </div>
-</div>
+				@endforeach
+				
+			<div class="row">
+		    	{{ $posts->links() }}
+		    </div>
+		</div>
+	</section>
 
-
-
-
-
+	<section class="module parallax parallax-2" id="portfolio">
+	 	<div class="container">
+	    	<h1>My Portfolio</h1>
+    		<div class="text-center" id="box1">
+				
+				<h2><a href="/whackamole/whack.html"><img src="/whackamole/jurassiclogo.jpg" height="" width="" class="img-circle"></a><br>Whack-a-Logo Game</h2>
+			</div>
+	  	</div>
+	</section>
 
 @stop
 

@@ -16,8 +16,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="https://docs.google.com/file/d/0B4_3BXvJT0LmSkxWalZ0T0RieHM" target="_blank">Resumé</a></li>
-        <li><a href="{{ action('HomeController@showPortfolio') }}">Portfolio</a></li>
-        <li><a href="{{ action('PostsController@index') }}">Blog</a></li>
+        <li><a href="/posts#portfolio">Portfolio</a></li>
+        <li><a href="/posts#blog">Blog</a></li>
         @if (Auth::check())
           <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
         @endif

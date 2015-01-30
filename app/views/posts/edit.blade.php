@@ -2,30 +2,32 @@
 
 @section ('content')
 
-	<h2 class="text-center">Edit Post</h2>
+<section class="module parallax parallax-2">
+	<div class="container">
+
+	<h2></h2>
+
 		<div class="col-md-6 col-md-offset-3">
         	<div class="row">
 		       	{{ Form::open(array('method' => 'PUT', 'action' => ['PostsController@update', $post->id], 'role' => 'form')) }}
 					<div class="form-group">
-						<label for="title" class="edit-title">Title</label>
+						<label for="title" class="edit-title"><h3>Title</h3></label>
 					    <input type="text" class="form-control" name="title" value="{{{ $post->title }}}" id="blogTitle" placeholder="Title">
 					</div>
 					<div class="form-group">
-					    <label for="body" class="edit-body">Body</label>
+					    <label for="body" class="edit-body"><h3>Body</h3></label>
 					    <textarea name="body" rows="4" class="form-control">{{{ $post->body }}}</textarea>
 					</div>
-					<button type="submit" class="btn btn-success btn-sm">Save</button>
+					<div class="row">
+						<button type="submit" class="btn btn-success btn-sm">Save</button>
+			        </div>	
 				{{ Form::close() }}	
 			</div>
-			<div class="row"> 
-		        {{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'class' => 'form-horizontal', 'id' => 'delete-form')) }}
-		           
-		            {{ Form::submit('Delete!', (array('class' => 'btn btn-danger btn-sm')))}}
-		        
-		        {{ Form::close() }}
-		    </div>
 		</div>
-</div>
+	</div>
+</section>
+	
+</section>
 
 @stop
 
