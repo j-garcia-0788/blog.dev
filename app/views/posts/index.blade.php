@@ -14,8 +14,8 @@
 			<div class="title"><strong>Blog Posts</strong></div>
 				
 				@foreach ($posts as $post)
-					<div class="col-md-4">
-						<div class="post">
+					<div class="col-sm-4">
+						<div class="post text-center">
 							<p><strong> {{$post->title}} </strong></p>
 							<p class='blog_body'> {{ substr($post->body, 0, 150) }} ...</p>
 							<div class="row">
