@@ -3,32 +3,39 @@
 <head>
     <title>James' Site</title>
 	
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 	
 	<link rel="stylesheet" href="/css/style.css">
+
+	<style type="text/css">
+		@import url(//fonts.googleapis.com/css?family=Lato:700);
+	</style>
 
 </head>
 <body>
 
 	@include ('partials.navbar')
 		<div class="text-center">
-			@if (Session::has('successMessage'))
-			    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-			@endif
-			@if (Session::has('errorMessage'))
-			    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-			@endif
+			<div class="flash">
+				@if (Session::has('successMessage'))
+				    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+				@endif
+				@if (Session::has('errorMessage'))
+				    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+				@endif
+			</div>
 		
 	    	@yield('content')
 	    </div>
 	@include ('partials.footer')
 
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 	@yield('bottomscript')
+	
 </body>
 </html>

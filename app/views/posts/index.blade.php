@@ -37,7 +37,6 @@
 	 	<div class="container">
 	    	<h1>My Portfolio</h1>
     		<div class="text-center" id="box1">
-				
 				<h2><a href="/whackamole/whack.html"><img src="/whackamole/jurassiclogo.jpg" height="" width="" class="img-circle"></a><br>Whack-a-Logo Game</h2>
 			</div>
 	  	</div>

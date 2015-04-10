@@ -8,7 +8,7 @@
     	<div class="col-lg-12 text center">
 			<h3>{{ $post->body }}</h3>
 		</div>
-		<h3>Created on: {{ date("d F Y",strtotime($post->created_at)) }}</h3>
+		<h3>Created on: {{ date("F d, Y",strtotime($post->created_at)) }}</h3>
   		<div class="col-lg-12 text-center">
 			@if (Auth::check())
 				<a class='btn btn-success btn-sm' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
