@@ -42,6 +42,9 @@
 	border: 10px solid gray;
 	background-color: white;
 }
+.alert {
+	margin-bottom: 0px;
+}
 
 /*parallax*/
 section.module:last-child {
