@@ -17,11 +17,8 @@
 					<div class="col-sm-4">
 						<div class="post text-center">
 							<p><strong> {{$post->title}} </strong></p>
-							<div class='blog_body'> {{ substr($post->body, 0, 150) }} ...</div>
 							<div class="row">
-								{{ Form::open(array('method' => 'delete', 'action' => ['PostsController@destroy', $post->id], 'role' => 'form', 'id' => 'delete-form')) }}
-									<a class='btn btn-info btn-xs' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-							    {{ Form::close() }}
+								<a class='button' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
 							</div>
 						</div>
 					</div>

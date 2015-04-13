@@ -9,13 +9,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="">James' Blog</a>
+      <a class="navbar-brand" href="">James Site</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="https://docs.google.com/file/d/0B4_3BXvJT0LmSkxWalZ0T0RieHM" target="_blank">Resumé</a></li>
+        <li><a href="https://docs.google.com/file/d/0B6cHlmHyLASsa2lUUEZqWElWUGc" target="_blank">Resumé</a></li>
         <li><a href="/posts#portfolio">Portfolio</a></li>
         <li><a href="/posts#blog">Blog</a></li>
         @if (Auth::check())
@@ -36,7 +36,7 @@
       {{ Form::open(array('action'=> array('PostsController@index'), 'class'=>'nav navbar-form navbar-right', 'method'=> 'GET')) }}
       {{ Form::text('search', null, array('placeholder'=> 'Search Blog Posts', 'class'=>'form-control')) }}
 
-      {{ Form::submit('Search', array('class'=>'btn btn-default')) }}
+      {{ Form::button('<i class="glyphicon glyphicon-search"></i>', array('type' => 'submit', 'class' => 'glyphicon'))}}
 
       {{ Form::close() }}
       <ul class="nav navbar-nav navbar-right">

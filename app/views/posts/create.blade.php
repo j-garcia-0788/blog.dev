@@ -13,7 +13,7 @@
 			   	@include('posts.form')
 
 				<div>
-			    <input type="submit" class="btn btn-info" name="button">
+			    <input type="submit" class="button" name="button">
 			    </div>
 			{{ Form::close() }}
 		</div>

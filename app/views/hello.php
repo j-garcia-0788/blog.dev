@@ -42,7 +42,7 @@
 			<div class="animate rollIn">
 				<a href="/posts" title="Laravel PHP Framework"><img class="me" src="/img/r2.jpg" height="400px"></a>
 			</div>
-			<h1>My creations.</h1>
+			<h1>My Face.</h1>
 		</div>
 	</body>
 
