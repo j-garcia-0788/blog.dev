@@ -2,13 +2,10 @@
 
 @section ('content')
 
-<section class="module parallax parallax-2">
+<section class="module parallax parallax-1 parallax-window">
 	<div class="container">
-
-	<h2></h2>
-
 		<div class="col-md-6 col-md-offset-3">
-        	<div class="row">
+	    	<div class="row">
 		       	{{ Form::open(array('method' => 'PUT', 'action' => ['PostsController@update', $post->id], 'role' => 'form')) }}
 					<div class="form-group">
 						<label for="title" class="edit-title"><h3>Title</h3></label>
@@ -19,24 +16,21 @@
 					    <textarea name="body" rows="4" class="form-control">{{{ $post->body }}}</textarea>
 					</div>
 					<div class="row">
-						<button type="submit" class="btn btn-success btn-sm">Save</button>
+						<button type="submit" class="button">Save</button>
 			        </div>	
 				{{ Form::close() }}	
 			</div>
 		</div>
 	</div>
 </section>
-	
-</section>
 
 @stop
 
 @section('bottomscript')
+
 	<script type="text/javascript">
-		$('#delete-form').submit(function(e) {
-			if (!confirm('Are you sure you want to delete this post?')){
-				e.preventDefault();
-			}
-		});
+
+		$('.parallax-window').parallax({imageSrc: '/img/rocks.jpg'});
+
 	</script>
 @stop

@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<section class="module parallax parallax-2">
+<section class="module parallax parallax-1 parallax-window">
 	<div class="container">
     	<h2>{{ $post->title }}</h2>
     	<div class="col-lg-12 text center">
@@ -20,13 +20,32 @@
 			</div>
 			<div class="col-lg-4">
 				@if (Auth::check())
+					<a class='deletebtn' id="delete" href="#">Delete</a>
 					{{ Form::open(['action' =>['PostsController@destroy', $post->id], 'method' => 'delete', 'id' => 'delete-form']) }}
-						{{ Form::submit('Delete', ['class' => 'deletebtn']) }}
 					{{ Form::close() }}
 				@endif
 			</div>
 		</div>
 	</div>
 </section>
+
+@stop
+
+@section('bottomscript')
+
+	<script type="text/javascript">
+		$('#delete').click(
+			function()
+			{
+				$('#delete-form').submit();
+			}
+		);
+		$('#delete-form').submit(function(e) {
+			if (!confirm('Are you sure you want to delete this post?')){
+				e.preventDefault();
+			}
+		});
+		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
+	</script>
 
 @stop

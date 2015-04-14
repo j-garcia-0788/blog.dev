@@ -13,6 +13,30 @@
 	margin-top: 50px;
 }
 
+.blogbtn {
+	font-size: 1.2em;
+	padding: .6em;
+	border: .2em solid #000;
+	text-transform: uppercase;
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+	-moz-transition: all 300ms;
+	-o-transition: all 300ms;
+	-webkit-transition: all 300ms;
+	transition: all 300ms;
+}
+.blogbtn:hover {
+	border: .2em solid white;
+	color: black;
+	background-color: white;
+	text-decoration: none;
+	-moz-transition: all 300ms;
+	-o-transition: all 300ms;
+	-webkit-transition: all 300ms;
+	transition: all 300ms; 
+}
+
 /*buttons*/
 .button {
 	font-size: 1.2em;
@@ -92,6 +116,10 @@
 	width: 400px;
 }
 
+.post.posttitle {
+	margin-bottom: 50px;
+}
+
 .show {
 	margin-top: 100px;
 	padding-top: 100px;
@@ -111,16 +139,16 @@
 }
 
 /*parallax*/
-section.module:last-child {
+section.parallax:last-child {
 	margin-bottom: 0;
 }
-section.module h2 {
+section.parallax h2 {
 	margin-bottom: 40px;
 	font-family: "Tahoma", serif;
 	font-size: 30px;
 }
 
-section.module h3 {
+section.parallax h3 {
 	margin-bottom: 40px;
 	font-family: "Tahoma", serif;
 	font-size: 30px;
@@ -131,27 +159,27 @@ section.module h3 {
 	text-shadow: 2px 2px 4px #000000;
 }
 
-section.module p {
+section.parallax p {
 	margin-bottom: 40px;
 	font-size: 16px;
 	font-weight: 300;
 }
-section.module p:last-child {
+section.parallax p:last-child {
 	margin-bottom: 0;
 }
-section.module.content {
+section.content {
 	padding: 40px 0;
-	color: white;
-	background-color: #3f484f; 
+	color: black;
+	background-color: #cecece; 
 }
-section.module.parallax {
+section.parallax.parallax {
 	height: 700px;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 }
-section.module.parallax h1, h2 {
+section.parallax.parallax h1, h2 {
 	padding-top: 100px;
 	color: rgba(255, 255, 255, 0.8);
 	font-size: 48px;
@@ -161,35 +189,30 @@ section.module.parallax h1, h2 {
 	text-transform: uppercase;
 	text-shadow: 2px 2px 4px #000000;
 }
-section.module.parallax-1 {
-	background-image: url("../img/rocks.jpg");
-}
-section.module.parallax-2 {
-	background-image: url("../img/rocks.jpg");
-}
 
 @media all and (min-width: 600px) {
-	section.module p {
+	section.content p {
+		margin-bottom: 50px;
 		font-size: 20px;
 	}
-  	section.module.parallax h1 {
+  	section.content h1 {
   		font-size: 96px;
 	}
 }
 
 @media all and (min-width: 960px) {
-  	section.module.parallax h1, {
+  	section.content h1, {
 		font-size: 75px;
   	}
 }
 @media all and (min-width: 960px) {
-	section.module.parallax h2, {
+	section.content h2, {
 		font-size: 40px;
   	}
 }
 
 @media all and (min-width: 960px) {
-  	section.module.parallax h3, {
+  	section.content h3, {
     	font-size: 30px;
   	}
 }

@@ -2,23 +2,23 @@
 
 @section ('content')
 	
-	<section class="module parallax parallax-1">
+	<section class="module parallax parallax-1" data-parallax="scroll" data-image-src="../img/rocks.jpg">
 		<div class="container">
-			<h1>James Garcia</h1>
+			<h1 ="james">James Garcia</h1>
 			<h2>Linux, Apache, MYSQL, PHP, HTML, CSS, Javascript, Laravel, Bootstrap</h2>
 		</div>
 	</section>
 
-	<section class="module content" id="blog">
+	<section class="content" id="blog">
 		<div class="container">
 			<div class="title"><strong>Blog Posts</strong></div>
 				
 				@foreach ($posts as $post)
 					<div class="col-sm-4">
 						<div class="post text-center">
-							<p><strong> {{$post->title}} </strong></p>
+							<p class="posttitle"><strong> {{$post->title}} </strong></p>
 							<div class="row">
-								<a class='button' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
+								<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
 							</div>
 						</div>
 					</div>
@@ -30,11 +30,16 @@
 		</div>
 	</section>
 
-	<section class="module parallax parallax-2" id="portfolio">
+	<section class="module parallax parallax-1" data-parallax="scroll" data-image-src="../img/rocks.jpg">
 	 	<div class="container">
 	    	<h1>My Portfolio</h1>
-    		<div class="text-center" id="box1">
-				<h2><a href="/whackamole/whack.html"><img src="/whackamole/jurassiclogo.jpg" height="" width="" class="img-circle"></a><br>Whack-a-Logo Game</h2>
+	    	<div class="row">
+	    		<div class="col-md-6" id="box1">
+					<h2><a href="/whackamole/whack.html"><img src="/whackamole/jurassiclogo.jpg" height="" width="" class="img-circle"></a><br>Whack-a-Logo Game</h2>
+				</div>
+				<div class="col-md-6" id="box2">
+					<h2><a href="http://worldmentr.org"><img src="/img/globe.png" height="151px" width="" class="img-circle"></a><br>WorldMentr.org</h2>
+				</div>
 			</div>
 	  	</div>
 	</section>
@@ -52,6 +57,8 @@
 				$("#delete-form").submit();
 			}
 		});
+
+		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
 	</script>
 
 @stop
