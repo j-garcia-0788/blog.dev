@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -36,7 +36,7 @@
       {{ Form::open(array('action'=> array('PostsController@index'), 'class'=>'nav navbar-form navbar-right', 'method'=> 'GET')) }}
       {{ Form::text('search', null, array('placeholder'=> 'Search Blog Posts', 'class'=>'form-control')) }}
 
-      {{ Form::button('<i class="glyphicon glyphicon-search"></i>', array('type' => 'submit', 'class' => 'glyphicon'))}}
+      {{ Form::button('<span class="glyphicon glyphicon-search"></span>', array('type' => 'submit', 'class' => 'glyphicon'))}}
 
       {{ Form::close() }}
       <ul class="nav navbar-nav navbar-right">

@@ -4,7 +4,7 @@
 
 <section class="module parallax parallax-1 parallax-window">
 	<div class="container">
-    	<h2>New Post</h2>
+    	<h2 class="header-text">New Post</h2>
 		<div class="col-md-6 col-md-offset-3 text-center">
 			{{ Form::open(array('action' => 'PostsController@store')) }}
 			    

@@ -1,28 +1,30 @@
 @extends ('layouts.master')
 
 @section ('content')
-	
-	<section class="module parallax parallax-1" data-parallax="scroll" data-image-src="../img/rocks.jpg">
-		<div class="container">
-			<h1 ="james">James Garcia</h1>
-			<h2>Linux, Apache, MYSQL, PHP, HTML, CSS, Javascript, Laravel, Bootstrap</h2>
-		</div>
-	</section>
+
+	<div class="heading">
+		<section class="module parallax parallax-1 parallax-window">
+			<div class="container">
+				<h1>James Garcia</h1>
+				<h2>Laravel, MySQL, PHP, HTML, CSS, Javascript, jQuery, Bootstrap, Photoshop</h2>
+			</div>
+		</section>
+	</div>
 
 	<section class="content" id="blog">
 		<div class="container">
-			<div class="title"><strong>Blog Posts</strong></div>
+			<div class="title">
+				<strong>Blog Posts</strong>
+			</div>
 				
-				@foreach ($posts as $post)
-					<div class="col-sm-4">
-						<div class="post text-center">
-							<p class="posttitle"><strong> {{$post->title}} </strong></p>
-							<div class="row">
-								<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-							</div>
-						</div>
+			@foreach ($posts as $post)
+				<div class="col-md-4 post text-center">
+					<p class="posttitle"><strong> {{$post->title}} </strong></p>
+					<div class="row">
+						<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
 					</div>
-				@endforeach
+				</div>
+			@endforeach
 				
 			<div class="row">
 		    	{{ $posts->links() }}
@@ -30,7 +32,7 @@
 		</div>
 	</section>
 
-	<section class="module parallax parallax-1" data-parallax="scroll" data-image-src="../img/rocks.jpg">
+	<section class="module parallax parallax-1 parallax-window" id="portfolio">
 	 	<div class="container">
 	    	<h1>My Portfolio</h1>
 	    	<div class="row">

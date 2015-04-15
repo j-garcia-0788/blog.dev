@@ -2,7 +2,36 @@
 @import url(//fonts.googleapis.com/css?family=Lato:700);
 
 /*main*/
-.title{
+@media screen and (max-width: 480px) {
+	.heading {
+	width: 100%;
+	height: auto;
+	}
+}
+
+.header-text {
+	height: auto;
+}
+
+h1, h2 {
+	padding-top: 100px;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 48px;
+	line-height: 100px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 4px #000000;
+}
+
+@media screen and (max-width: 580px)
+#id.title {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
 	font-family:'Lato', sans-serif;
 	font-size: 30px;
 	text-transform: uppercase;
@@ -92,7 +121,16 @@
 	background-color: #141414;
 	color: white;
 	border-color: #141414;
+
 }
+
+.content {
+	display: block;
+	padding: 40px 0;
+	color: black;
+	background-color: #cecece; 
+}
+
 /*bars*/
 .footer {
 	position: relative;
@@ -106,18 +144,28 @@
 	font-size: 20px;
 }
 
-.navbar{
+.navbar {
 	margin-bottom: 0px;
 	background: #141414;
+	color: #cecece;	
+}
+
+.navbar a {
+	color: #cecece;
+	text-decoration: none;	
+}
+.navbar a:hover {
+	background-color: #141414;
+	color: #cecece;
 }
 
 .post {
 	height: 200px;
-	width: 400px;
 }
 
-.post.posttitle {
+.posttitle {
 	margin-bottom: 50px;
+	font-size: 2em;
 }
 
 .show {
@@ -148,7 +196,7 @@ section.parallax h2 {
 	font-size: 30px;
 }
 
-section.parallax h3 {
+h3 {
 	margin-bottom: 40px;
 	font-family: "Tahoma", serif;
 	font-size: 30px;
@@ -164,55 +212,4 @@ section.parallax p {
 	font-size: 16px;
 	font-weight: 300;
 }
-section.parallax p:last-child {
-	margin-bottom: 0;
-}
-section.content {
-	padding: 40px 0;
-	color: black;
-	background-color: #cecece; 
-}
-section.parallax.parallax {
-	height: 700px;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-}
-section.parallax.parallax h1, h2 {
-	padding-top: 100px;
-	color: rgba(255, 255, 255, 0.8);
-	font-size: 48px;
-	line-height: 100px;
-	font-weight: 400;
-	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 2px 2px 4px #000000;
-}
 
-@media all and (min-width: 600px) {
-	section.content p {
-		margin-bottom: 50px;
-		font-size: 20px;
-	}
-  	section.content h1 {
-  		font-size: 96px;
-	}
-}
-
-@media all and (min-width: 960px) {
-  	section.content h1, {
-		font-size: 75px;
-  	}
-}
-@media all and (min-width: 960px) {
-	section.content h2, {
-		font-size: 40px;
-  	}
-}
-
-@media all and (min-width: 960px) {
-  	section.content h3, {
-    	font-size: 30px;
-  	}
-}
