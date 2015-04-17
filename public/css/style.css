@@ -1,6 +1,11 @@
 
 @import url(//fonts.googleapis.com/css?family=Lato:700);
 
+body, html {
+	height: 100%;
+}
+
+
 /*main*/
 @media screen and (max-width: 480px) {
 	.heading {
@@ -9,6 +14,14 @@
 	}
 }
 
+.blogbutton {
+	width: auto;
+	padding-bottom: 75px;
+}
+
+.body {
+	min-height: 100%;
+}
 .header-text {
 	height: auto;
 }
@@ -25,11 +38,11 @@ h1, h2 {
 }
 
 @media screen and (max-width: 580px)
-#id.title {
-  display: block;
-  width: 100%;
-  text-align: center;
-}
+	#id.title {
+	  display: block;
+	  width: 100%;
+	  text-align: center;
+	}
 
 .title {
 	font-family:'Lato', sans-serif;
@@ -168,6 +181,12 @@ h1, h2 {
 	font-size: 2em;
 }
 
+.newpost {
+	width: auto;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
 .show {
 	margin-top: 100px;
 	padding-top: 100px;
@@ -186,10 +205,10 @@ h1, h2 {
 	color: white;
 }
 
-/*parallax*/
-section.parallax:last-child {
-	margin-bottom: 0;
+.parallax {
+	min-height: 100%;
 }
+/*parallax*/
 section.parallax h2 {
 	margin-bottom: 40px;
 	font-family: "Tahoma", serif;
@@ -212,4 +231,3 @@ section.parallax p {
 	font-size: 16px;
 	font-weight: 300;
 }
-
