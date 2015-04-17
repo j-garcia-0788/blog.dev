@@ -2,13 +2,13 @@
 
 @section ('content')
 
-<section class="module parallax parallax-1 parallax-window">
+<section class="parallax parallax-window">
 	<div class="container">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="newpost">
 	    	<div class="row">
 		       	{{ Form::open(array('method' => 'PUT', 'action' => ['PostsController@update', $post->id], 'role' => 'form')) }}
 					<div class="form-group">
-						<label for="title" class="edit-title"><h3>Title</h3></label>
+						<label for="title" class="header-text"><h2>Title</h2></label>
 					    <input type="text" class="form-control" name="title" value="{{{ $post->title }}}" id="blogTitle" placeholder="Title">
 					</div>
 					<div class="form-group">

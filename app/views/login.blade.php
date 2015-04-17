@@ -2,10 +2,10 @@
 
 @section('content')
 
-<section class="module parallax parallax-1 parallax-window">
+<section class="heading parallax parallax-window">
  	<div class="container">
     	<h2>Login:</h2>
-		<div class="row text-center">
+		<div class="newpost">
 			<div class="col-md-6 col-md-offset-3">
 				{{ Form::open(['action' => 'HomeController@doLogin']) }}
 

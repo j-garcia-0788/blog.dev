@@ -3,7 +3,7 @@
 @section ('content')
 
 	<div class="heading">
-		<section class="module parallax parallax-1 parallax-window">
+		<section class="parallax parallax-window">
 			<div class="container">
 				<h1>James Garcia</h1>
 				<h2>Laravel, MySQL, PHP, HTML, CSS, Javascript, jQuery, Bootstrap, Photoshop</h2>

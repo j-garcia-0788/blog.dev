@@ -18,7 +18,7 @@
 
 		@include ('partials.navbar')
 		
-		<div class="text-center">
+		<div class="body text-center">
 			<div class="flash">
 				@if (Session::has('successMessage'))
 				    <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
@@ -31,11 +31,7 @@
 	    	@yield('content')
 	    </div>
 		
-		<footer class="footer">
-		    <div class="span3">
-		      <h4>James Garcia</h4>
-		    </div>
-		</footer>
+		@include ('partials.footer')
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 

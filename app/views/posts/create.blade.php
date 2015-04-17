@@ -2,10 +2,10 @@
 
 @section ('content')
 
-<section class="module parallax parallax-1 parallax-window">
+<section class="parallax parallax-window">
 	<div class="container">
     	<h2 class="header-text">New Post</h2>
-		<div class="col-md-6 col-md-offset-3 text-center">
+		<div class="newpost">
 			{{ Form::open(array('action' => 'PostsController@store')) }}
 			    
 			   	@include('posts.form')
