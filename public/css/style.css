@@ -68,6 +68,24 @@ body {
 	}
 }
 
+/*portfolio*/
+.portfolio {
+	padding: 5%;
+  	margin: 0 auto;
+	text-align: center;
+	background-color: #9d9d9d;
+	padding: 1%;
+}
+
+.portfolioheading {
+	color: #141414;
+}
+
+.projects {
+	padding-top: 40px;
+	color: #141414;
+}
+ /*buttons*/
 .blogbutton {
 	width: auto;
 	padding-bottom: 75px;
@@ -139,15 +157,6 @@ h4 {
 
 .flash {
 	margin-top: 50px;
-}
-/*portfolio*/
-.portfolio {
-	background-color: #9d9d9d;
-	padding: 1%;
-}
-
-.portfolioheading {
-	color: #141414;
 }
 
 /*buttons*/

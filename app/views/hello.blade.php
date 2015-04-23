@@ -20,20 +20,20 @@
 				<p>Through PHP I have been able to write web apps that can capture user information and send it to a SQL database, then send it back to the application. My blog uses this skill and gives you an idea of my interests and the awesome place that is mind.</p>
 			</div>
 			<div class="box2">
-				<h3 class="experience">Front End Design</h3>
-				<p>Through PHP I have been able to write web apps that can capture user information and send it to a SQL database, then send it back to the application. My blog uses this skill and gives you an idea of my interests and the awesome place that is mind.</p>
+				<h3 class="experience">Front End and Design</h3>
+				<p>With HTML, CSS, and Javascript, I have been able to create pretty awesome sites and projects. I have experience with Photoshop so I am able to design some aspects of my sites and projects. I find front end exciting and fun.</p>
 			</div>
 		</div>
 	</div>
-	
-	<div class="portfolio" id="portfolio">
-    	<h1 class="portfolioheading">My Portfolio</h1>
-    	<div class="row">
-    		<div class="col-md-6" id="box1">
-				<h2 class="portfolioheading"><a href="/whackamole/whack.html"><img src="/whackamole/jurassiclogo.jpg" height="" width="" class="img-circle"></a><br>Whack-a-Logo Game</h2>
+
+	<div class="portfolio">
+		<h3 class="portfolioheading">My Portfolio</h3>
+		<div class="experienceboxes">
+			<div class="box1">
+				<h3 class="projects"><a href="/whackamole/whack.html"><img src="/whackamole/jurassiclogo.jpg" height="" width="" class="img-circle"></a><br>Whack-a-Logo Game</h3>
 			</div>
-			<div class="col-md-6" id="box2">
-				<h2 class="portfolioheading"><a href="http://worldmentr.org"><img src="/img/globe.png" height="151px" width="" class="img-circle"></a><br>WorldMentr.org</h2>
+			<div class="box2">
+				<h3 class="projects"><a href="http://worldmentr.org"><img src="/img/globe.png" height="151px" width="" class="img-circle"></a><br>WorldMentr.org</h3>
 			</div>
 		</div>
 	</div>
