@@ -2,20 +2,20 @@
 
 @section ('content')
 
-<section class="parallax parallax-window">
+<div class="parallaxscroll parallax-window">
 	<div class="container">
     	<h2 class="header-text">New Post</h2>
 		<div class="newpost">
 			{{ Form::open(array('action' => 'PostsController@store')) }}
 			    
 			   	@include('posts.form')
-
-			    <input type="submit" class="button" name="button">
-			   
+			   	<div class="blogbutton">
+			    	<input type="submit" class="button" name="button">
+			   	</div>
 			{{ Form::close() }}
 		</div>
 	</div>
-</section>
+</div>
 
 @stop
 

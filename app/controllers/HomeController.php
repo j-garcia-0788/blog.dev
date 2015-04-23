@@ -17,7 +17,7 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('PostsController@index');
+		return View::make('HomeController@showWelcome');
 	}
 
 	public function sayHello($name)

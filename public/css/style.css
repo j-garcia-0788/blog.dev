@@ -1,10 +1,13 @@
 
 @import url(//fonts.googleapis.com/css?family=Lato:700);
 
-body, html {
+body {
+	width: 100%;
 	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
 }
-
 
 /*main*/
 @media screen and (max-width: 480px) {
@@ -14,19 +17,72 @@ body, html {
 	}
 }
 
+.content {
+	padding: 5%;
+  	margin: 0 auto;
+	text-align: center;
+	background-color: #141414;
+	color: #cecece;
+}
+
+.experienceboxes {
+	
+}
+
+.experience {
+	font-size: 20px;
+}
+
+.box1 {
+	width: 30%;
+	float: left;
+	margin-left: 10%;
+
+}
+
+.box2 {
+	width: 30%;
+	float: right;
+	margin-right: 10%;
+}
+
+.experienceboxes:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media screen and (max-width: 480px) {
+	.box1 {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.box2 {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	}
+}
+
 .blogbutton {
 	width: auto;
 	padding-bottom: 75px;
 }
 
-.body {
-	min-height: 100%;
+.allcontent {
+	height: 100%;
+	width: 100%;
+	text-align: center;
 }
 .header-text {
 	height: auto;
 }
 
-h1, h2 {
+h1 {
 	padding-top: 100px;
 	color: rgba(255, 255, 255, 0.8);
 	font-size: 48px;
@@ -34,15 +90,44 @@ h1, h2 {
 	font-weight: 400;
 	text-align: center;
 	text-transform: uppercase;
-	text-shadow: 2px 2px 4px #000000;
 }
 
-@media screen and (max-width: 580px)
+h2 {
+	padding-top: 100px;
+	color: rgba(255, 255, 255, 0.8);
+	font-size: 30px;
+	line-height: 100px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+h3 {
+	margin-bottom: 40px;
+	font-family: "Tahoma", serif;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+}
+h4 {
+	margin-bottom: 20px;
+	font-family: "Tahoma", serif;
+	font-size: 15px;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase; 
+}
+
+@media screen and (max-width: 480px) {
 	#id.title {
 	  display: block;
 	  width: 100%;
 	  text-align: center;
 	}
+}
 
 .title {
 	font-family:'Lato', sans-serif;
@@ -51,10 +136,21 @@ h1, h2 {
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
+
 .flash {
 	margin-top: 50px;
 }
+/*portfolio*/
+.portfolio {
+	background-color: #9d9d9d;
+	padding: 1%;
+}
 
+.portfolioheading {
+	color: #141414;
+}
+
+/*buttons*/
 .blogbtn {
 	font-size: 1.2em;
 	padding: .6em;
@@ -79,7 +175,6 @@ h1, h2 {
 	transition: all 300ms; 
 }
 
-/*buttons*/
 .button {
 	font-size: 1.2em;
 	padding: .6em;
@@ -137,20 +232,13 @@ h1, h2 {
 
 }
 
-.content {
-	display: block;
-	padding: 40px 0;
-	color: black;
-	background-color: #cecece; 
-}
-
 /*bars*/
 .footer {
 	position: relative;
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-	background: #141414;
+	background-color: #141414;
 	color: white;
 	text-align: center;
 	padding-top: 15px;
@@ -174,17 +262,38 @@ h1, h2 {
 
 .post {
 	height: 200px;
+	width: 100%;
+	background-color: #cecece;
+	margin: 20px;
+	border-color: black;
+	border: 2px;
+	border-style: solid;
+}
+
+@media screen and (max-width: 480px) {
+	.post {
+	width: 90%;
+	height: 200px;
+	}
 }
 
 .posttitle {
-	margin-bottom: 50px;
+	margin: 50px;
 	font-size: 2em;
 }
 
 .newpost {
-	width: auto;
+	width: 70%;
 	min-height: 100%;
 	margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) { 
+	.newpost {
+	margin-top: 20px;
+	width: 90%;
+	min-height: 100%;
+	}
 }
 
 .show {
@@ -203,31 +312,4 @@ h1, h2 {
 
 .formtitles {
 	color: white;
-}
-
-.parallax {
-	min-height: 100%;
-}
-/*parallax*/
-section.parallax h2 {
-	margin-bottom: 40px;
-	font-family: "Tahoma", serif;
-	font-size: 30px;
-}
-
-h3 {
-	margin-bottom: 40px;
-	font-family: "Tahoma", serif;
-	font-size: 30px;
-	color: rgba(255, 255, 255, 0.8);
-	font-weight: 400;
-	text-align: center;
-	text-transform: uppercase;
-	text-shadow: 2px 2px 4px #000000;
-}
-
-section.parallax p {
-	margin-bottom: 40px;
-	font-size: 16px;
-	font-weight: 300;
 }

@@ -2,14 +2,14 @@
 
 @section ('content')
 
-	<section class="parallax parallax-window">
+	<div class="parallax parallax-window">
 		<div class="container">
 	    	<div class="newpost" id="blog">
 		    	<h2>{{ $post->title }}</h2>
 		    	<div class="col-lg-12 text center">
 					<h3>{{ $post->body }}</h3>
 				</div>
-				<h3>Created on: {{ date("F d, Y",strtotime($post->created_at)) }}</h3>
+				<h4>Created on: {{ date("F d, Y",strtotime($post->created_at)) }}</h4>
 				<div class="postbuttons">
 			  		<div class="col-lg-4">
 			  			<div class="blogbutton">
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 
 @stop
 
