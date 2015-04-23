@@ -52,7 +52,9 @@
 				e.preventDefault();
 			}
 		});
+
 		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
+		
 	</script>
 
 @stop

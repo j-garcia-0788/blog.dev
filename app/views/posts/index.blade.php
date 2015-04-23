@@ -3,19 +3,17 @@
 @section ('content')
 
 	<div class="heading">
-		<div class="parallaxscroll parallax-window">
-			<div class="content" id="blog">
+		<div class="parallax parallax-window">
+			<div class="blogcontent" id="blog">
 				<div class="container">
 					<div class="title">
 						<h1>Blog Posts</h1>
 					</div>
 						
 					@foreach ($posts as $post)
-						<div class="col-md-4">
-							<div class="post">
-								<p class="posttitle"><strong> {{$post->title}} </strong></p>	
-								<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-							</div>
+						<div class="blogbox">
+							<h3 class="projects"><strong> {{$post->title}} </strong></h3>	
+							<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
 						</div>
 					@endforeach
 						

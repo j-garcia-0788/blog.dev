@@ -91,11 +91,7 @@ body {
 	padding-bottom: 75px;
 }
 
-.allcontent {
-	height: 100%;
-	width: 100%;
-	text-align: center;
-}
+
 .header-text {
 	height: auto;
 }
@@ -269,26 +265,40 @@ h4 {
 	color: #cecece;
 }
 
-.post {
-	height: 200px;
-	width: 100%;
-	background-color: #cecece;
-	margin: 20px;
-	border-color: black;
-	border: 2px;
-	border-style: solid;
-}
 
-@media screen and (max-width: 480px) {
-	.post {
-	width: 90%;
-	height: 200px;
-	}
-}
+/*blog*/
 
+.blogcontent {
+	padding: 5%;
+  	margin: 0 auto;
+	text-align: center;
+	color: #cecece;
+}
 .posttitle {
 	margin: 50px;
 	font-size: 2em;
+	color: #141414;
+}
+
+.blogbox {
+	height: 225px;
+	width: 30%;
+	float: left;
+	margin-left: 12%;
+	border-color: black;
+	border: 2px;
+	border-style: solid;
+	background-color: #cecece;
+	margin-top: 20px;
+
+}
+@media screen and (max-width: 480px) {
+	.blogbox {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	}
 }
 
 .newpost {
@@ -313,6 +323,23 @@ h4 {
 	width: 600px;
 	border: 10px solid gray;
 	background-color: white;
+}
+
+.post {
+	height: 200px;
+	width: 100%;
+	background-color: #cecece;
+	margin: 20px;
+	border-color: black;
+	border: 2px;
+	border-style: solid;
+}
+
+@media screen and (max-width: 480px) {
+	.post {
+	width: 90%;
+	height: 200px;
+	}
 }
 
 .alert {

@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<div class="parallaxscroll parallax-window">
+<div class="parallax parallax-window">
 	<div class="container">
 		<div class="newpost">
 	       	{{ Form::open(array('method' => 'PUT', 'action' => ['PostsController@update', $post->id], 'role' => 'form')) }}
@@ -28,7 +28,7 @@
 
 	<script type="text/javascript">
 
-		$('.parallax-window').parallax({imageSrc: '/img/rocks.jpg'});
+		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
 
 	</script>
 @stop

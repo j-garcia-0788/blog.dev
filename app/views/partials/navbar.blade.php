@@ -17,7 +17,7 @@
       <ul class="nav navbar-nav">
         <li><a href="https://docs.google.com/file/d/0B6cHlmHyLASsa2lUUEZqWElWUGc" target="_blank">Resumé</a></li>
         <li><a href="/posts#portfolio">Portfolio</a></li>
-        <li><a href="/posts#blog">Blog</a></li>
+        <li><a href="{{ action('PostsController@index') }}">Blog</a></li>
         @if (Auth::check())
           <li><a href="{{ action('PostsController@create') }}">New Blog Post</a></li>
         @endif

@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<div class="parallaxscroll parallax-window">
+<div class="parallax parallax-window">
 	<div class="container">
     	<h2 class="header-text">New Post</h2>
 		<div class="newpost">
@@ -23,7 +23,7 @@
 
 	<script type="text/javascript">
 
-		$('.parallax-window').parallax({imageSrc: '/img/rocks.jpg'});
+		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
 	
 	</script>
 
