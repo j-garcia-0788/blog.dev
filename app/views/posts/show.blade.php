@@ -29,10 +29,8 @@
 				</div>
 				<h4>Created on: {{ date("F d, Y",strtotime($post->created_at)) }}</h4>
 				<div class="postbuttons">
-					<div class="">
-						<div class="blogbutton">
-							<a class='button' href="{{ action('PostsController@index') }}">Show Blog</a>
-						</div>
+					<div class="blogbutton">
+						<a class='button' href="{{ action('PostsController@index') }}">Show Blog</a>
 					</div>
 				</div>
 			</div>

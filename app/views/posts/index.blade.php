@@ -13,7 +13,6 @@
 					<div class="blogbox">
 						<h3 class="projects"><strong> {{$post->title}} </strong></h3>	
 						<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-
 					</div>
 				@endforeach
 					
