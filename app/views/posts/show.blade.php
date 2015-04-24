@@ -5,25 +5,8 @@
 	<div class="parallax parallax-window">
 		<div class="container">
 	    	<div class="newpost" id="blog">
-		    	<h2>{{ $post->title }}</h2>
-		    	<div class="col-lg-12 text center">
-					<h3>{{ $post->body }}</h3>
-				</div>
-				<h4>Created on: {{ date("F d, Y",strtotime($post->created_at)) }}</h4>
-				<div class="postbuttons">
-			  		<div class="col-lg-4">
-			  			<div class="blogbutton">
-							@if (Auth::check())
-								<a class='button' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
-							@endif
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="blogbutton">
-							<a class='button' href="{{ action('PostsController@index') }}">Show Blog</a>
-						</div>
-					</div>
-					<div class="col-lg-4">
+		    	<div class="userbuttons">
+			    	<div class="userbutton1">
 						@if (Auth::check())
 							<div class="blogbutton">
 								<a class='deletebtn' id="delete" href="#">Delete</a>
@@ -31,6 +14,25 @@
 								{{ Form::close() }}
 							</div>
 						@endif
+					</div>
+					<div class="userbutton2">
+			  			<div class="blogbutton">
+							@if (Auth::check())
+								<a class='button' href="{{ action('PostsController@edit', $post->id) }}">Edit Post</a>
+							@endif
+						</div>
+					</div>
+				</div>
+		    	<h3>{{ $post->title }}</h3>
+		    	<div class="">
+					<h3>{{ $post->body }}</h3>
+				</div>
+				<h4>Created on: {{ date("F d, Y",strtotime($post->created_at)) }}</h4>
+				<div class="postbuttons">
+					<div class="">
+						<div class="blogbutton">
+							<a class='button' href="{{ action('PostsController@index') }}">Show Blog</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -52,9 +54,8 @@
 				e.preventDefault();
 			}
 		});
-
-		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
 		
+		$('.parallax-window').parallax({imageSrc: '../img/rocks.jpg'});
 	</script>
 
 @stop

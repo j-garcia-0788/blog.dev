@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="portfolio">
+	<div class="portfolio" id="portfolio">
 		<h3 class="portfolioheading">My Portfolio</h3>
 		<div class="experienceboxes">
 			<div class="box1">

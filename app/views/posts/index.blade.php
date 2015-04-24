@@ -5,22 +5,21 @@
 	<div class="heading">
 		<div class="parallax parallax-window">
 			<div class="blogcontent" id="blog">
-				<div class="container">
-					<div class="title">
-						<h1>Blog Posts</h1>
-					</div>
-						
-					@foreach ($posts as $post)
-						<div class="blogbox">
-							<h3 class="projects"><strong> {{$post->title}} </strong></h3>	
-							<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
-						</div>
-					@endforeach
-						
-					<div class="row">
-				    	{{ $posts->links() }}
-				    </div>
+				<div class="title">
+					<h1>Blog Posts</h1>
 				</div>
+					
+				@foreach ($posts as $post)
+					<div class="blogbox">
+						<h3 class="projects"><strong> {{$post->title}} </strong></h3>	
+						<a class='blogbtn' href="{{ action('PostsController@show', $post->id) }}">View Post</a>
+
+					</div>
+				@endforeach
+					
+				<div class="row">
+			    	{{ $posts->links() }}
+			    </div>
 			</div>
 		</div>
 	</div>
