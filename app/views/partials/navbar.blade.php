@@ -15,7 +15,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="https://docs.google.com/file/d/0B6cHlmHyLASsa2lUUEZqWElWUGc" target="_blank">Resumé</a></li>
+        <li><a href="https://drive.google.com/file/d/0B6cHlmHyLASsZDRGbmd0NGVqeXM/view?usp=sharing" target="_blank">Resumé</a></li>
         <li><a href="/#portfolio">Portfolio</a></li>
         <li><a href="{{ action('PostsController@index') }}">Blog</a></li>
         @if (Auth::check())
