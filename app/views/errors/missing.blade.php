@@ -4,8 +4,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 	
-	<div id="backgound" class="container">
-		<br><br><br>
+	<div class="parallax parallax-window">
 		<h2>This page...?</h2>
 		<img src="../img/gohere.gif">
 	</div>
