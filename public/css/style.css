@@ -393,3 +393,7 @@ h4 {
 .formtitles {
 	color: white;
 }
+
+#missing {
+	margin: 0 auto;
+}
