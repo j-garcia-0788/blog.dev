@@ -7,7 +7,7 @@
 			<div class="container">
 				<h1>James Garcia</h1>
 				<h2>Laravel, MySQL, PHP, HTML, CSS, Javascript,
-				jQuery, Bootstrap, Photoshop</h2>
+				jQuery, Bootstrap, Photoshop, Swift</h2>
 			</div>
 		</div>
 	</div>
