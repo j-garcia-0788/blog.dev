@@ -30,7 +30,7 @@ class PostsController extends \BaseController
 		
 		$posts = $query->orderBy('created_at', 'desc')->paginate(6);
 
-		return View::make('posts.index')->with('posts', $posts)->with('search', $search);
+		return View::make('posts.index')->with(array('posts' => $posts))->with('search', $search);
 	}
 	/**
 	 * Show the form for creating a new resource.
