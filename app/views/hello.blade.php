@@ -13,7 +13,6 @@
 	</div>
 	
 	<div class="content">
-		<h3>Experience</h3>
 		<div class="experienceboxes">
 			<div class="box1">
 				<h3 class="experience">Back End</h3>
